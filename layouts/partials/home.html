@@ -10,6 +10,8 @@
 </section>
 <section class="container page">
   {{ with .GetPage "about" }}
+    <article>
     {{ .Content }}
+    </article>
   {{ end }}
 </section>
