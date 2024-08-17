@@ -6,7 +6,9 @@ defaultContentLanguage = "en"
 paginate = 6
 enableEmoji = true
 
-enableGitInfo = true
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^LAST_COMMIT_ID$', '^LAST_COMMIT_TIMESTAMP$']
 
 [services]
 [services.disqus]

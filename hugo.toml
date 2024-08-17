@@ -1,5 +1,9 @@
 baseURL = "https://example.com/"
 
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^LAST_COMMIT_ID$', '^LAST_COMMIT_TIMESTAMP$']
+
 [module]
 [module.hugoVersion]
 min = "0.124.0"
