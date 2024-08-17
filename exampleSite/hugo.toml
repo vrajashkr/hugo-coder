@@ -6,6 +6,8 @@ defaultContentLanguage = "en"
 paginate = 6
 enableEmoji = true
 
+enableGitInfo = true
+
 [services]
 [services.disqus]
 # Enable Disqus comments
