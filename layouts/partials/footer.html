@@ -14,9 +14,9 @@
     {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>
     ·
     {{ if .GitInfo }}
-      {{ "Commit ID:" }} {{ .GitInfo.AbbreviatedHash }} · {{ "Last Modified:" }} {{ .GitInfo.AuthorDate.Format "02-Jan-2006" }}
+      {{ "Commit" }} {{ .GitInfo.AbbreviatedHash }} · {{ "Last modified on" }} {{ .GitInfo.AuthorDate.Format "02-Jan-2006" }}
     {{ else }}
-      {{ "Commit ID:" }} {{ "abcdef" }} · {{ "Last Modified:" }} {{ "02-Jan-2006" }}
+      {{ "Commit" }} {{ "abcdef" }} · {{ "Last modified on" }} {{ "02-Jan-2006" }}
     {{ end }}
   </section>
 </footer>
