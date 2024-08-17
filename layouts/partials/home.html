@@ -1,11 +1,15 @@
-<section class="container centered">
-  <div class="about">
-    {{ partialCached "home/avatar.html" . }}
-
+<section class="container intro">
+  <div class="about" style="flex-grow: 1;">
     {{ partialCached "home/author.html" . }}
 
     {{ partialCached "home/social.html" . }}
   </div>
-
-  {{ partialCached "home/extensions.html" . }}
+  {{ with .Site.Params.avatarURL }}
+    <div class="avatar"><img src="{{ . | relURL }}" alt="avatar"/></div>
+  {{ end }}
+</section>
+<section class="container page">
+  {{ with .GetPage "about" }}
+    {{ .Content }}
+  {{ end }}
 </section>

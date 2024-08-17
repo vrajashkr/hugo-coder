@@ -29,6 +29,23 @@
       }
     }
 
+    .intro {
+      .about {
+        ul {
+          li {
+            a {
+              color: $fg-color-dark;
+
+              &:hover,
+              &:focus {
+                color: $link-color-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .centered {
       .about {
         ul {
