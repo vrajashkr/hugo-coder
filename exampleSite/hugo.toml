@@ -1,7 +1,7 @@
 baseURL = "http://www.example.com"
 title = "johndoe"
 theme = "hugo-coder"
-languageCode = "en"
+locale = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
 
@@ -182,6 +182,37 @@ paths = [
   { stroke = "none", d = "M0 0h24v24H0z", fill = "none" },
   { d = "M21 14l-9 7l-9 -7l3 -11l3 7h6l3 -7z" }
 ]
+
+# Credits to https://github.com/edent/SuperTinyIcons
+[[params.social]]
+  name = "Codeberg"
+  weight = 2
+  url = "https://codeberg.org/"
+
+  [params.social.icon]
+    width = 32
+    height = 32
+    viewbox = "0 0 512 512"
+    fill = "none"
+    stroke = "currentColor"
+    strokewidth = "2"
+    gradients = [
+      { id = "a", x2 = ".2", y2 = "1", stops = [
+        { offset = "0", color = "currentColor", opacity = "0" },
+        { offset = "0.495", color = "currentColor", opacity = "0.3" },
+        { offset = "1", color = "currentColor", opacity = "0.3" }
+      ] }
+    ]
+    paths = [
+      { stroke = "none", d = "m0 0H512V512H0", fill = "none" },
+    ]
+    globals = true
+    globaltransform = "scale(1.25)"
+    globaltransformorigin = "center"
+    globalsubpaths = [
+      { fill = "url(#a)", d = "M332 440.2a192 192 0 0086.8-74.4L256 156" },
+      { fill = "currentColor", d = "m418.6 365.8a192 192 0 10-325.3 0l160.1-207a3 3 0 015.2 0" }
+    ]
 
 [[params.social]]
 name = "Twitter"

@@ -18,6 +18,20 @@
              {{ range .icon.paths }}
                 <path {{ if .stroke }} stroke="{{ .stroke }}" {{ end }} d="{{ .d }}" {{ if .fill }}fill="{{ .fill }}"{{ end }}/>
              {{ end }}
+             {{ range .icon.gradients }}
+                <linearGradient id="{{ .id }}" {{ if .x1 }}x1="{{ .x1 }}"{{ end }} {{ if .y1 }}y1="{{ .y1 }}"{{ end }} {{ if .x2 }}x2="{{ .x2 }}"{{ end }} {{ if .y2 }}y2="{{ .y2 }}"{{ end }}>
+                  {{ range .stops }}
+                    <stop offset="{{ .offset }}" stop-color="{{ .color }}" {{ if .opacity }}stop-opacity="{{ .opacity }}"{{ end }}/>
+                  {{ end }}
+                </linearGradient>
+             {{ end }}
+             {{ if .icon.globals }}
+                <g {{ if .icon.globaltransform }} transform="{{ .icon.globaltransform }}" {{ end }} {{ if .icon.globaltransformorigin }}transform-origin="{{ .icon.globaltransformorigin }}"{{ end }}>
+                  {{ range .icon.globalsubpaths }}
+                    <path {{ if .stroke }} stroke="{{ .stroke }}" {{ end }} d="{{ .d }}" {{ if .fill }}fill="{{ .fill }}"{{ end }}/>
+                  {{ end }}
+                </g>
+             {{ end }}
             </svg>
         </a>
       </li>
