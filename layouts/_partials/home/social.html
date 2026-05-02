@@ -25,12 +25,8 @@
                   {{ end }}
                 </linearGradient>
              {{ end }}
-             {{ if .icon.globals }}
-                <g {{ if .icon.globaltransform }} transform="{{ .icon.globaltransform }}" {{ end }} {{ if .icon.globaltransformorigin }}transform-origin="{{ .icon.globaltransformorigin }}"{{ end }}>
-                  {{ range .icon.globalsubpaths }}
-                    <path {{ if .stroke }} stroke="{{ .stroke }}" {{ end }} d="{{ .d }}" {{ if .fill }}fill="{{ .fill }}"{{ end }}/>
-                  {{ end }}
-                </g>
+             {{ range .icon.group }}
+                {{ partial "svg_group" . }}
              {{ end }}
             </svg>
         </a>

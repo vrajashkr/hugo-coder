@@ -1,0 +1,13 @@
+<g {{ if .transform }} transform="{{ .transform }}" {{ end }} {{ if .transformorigin }}transform-origin="{{ .transformorigin }}"{{ end }}>
+    {{ range .nodes }}
+        {{ if eq .type "path" }}
+            <path {{ if .stroke }} stroke="{{ .stroke }}" {{ end }} d="{{ .d }}" {{ if .fill }}fill="{{ .fill }}"{{ end }}/>
+        {{ end }}
+        {{ if eq .type "group" }}
+            {{ partial "svg_group" . }}
+        {{ end }}
+        {{ if eq .type "polygon" }}
+            <polygon points="{{ .points }}" {{ if .fill }}fill="{{ .fill }}"{{ end }}/>
+        {{ end }}
+    {{ end }}
+</g>

@@ -196,23 +196,63 @@ paths = [
     fill = "none"
     stroke = "currentColor"
     strokewidth = "2"
-    gradients = [
-      { id = "a", x2 = ".2", y2 = "1", stops = [
-        { offset = "0", color = "currentColor", opacity = "0" },
-        { offset = "0.495", color = "currentColor", opacity = "0.3" },
-        { offset = "1", color = "currentColor", opacity = "0.3" }
-      ] }
+
+    [[params.social.icon.gradients]]
+    id = "a"
+    x2 = ".2"
+    y2 = "1"
+    stops = [
+      { offset = "0", color = "currentColor", opacity = "0" },
+      { offset = "0.495", color = "currentColor", opacity = "0.3" },
+      { offset = "1", color = "currentColor", opacity = "0.3" }
     ]
+
     paths = [
       { stroke = "none", d = "m0 0H512V512H0", fill = "none" },
     ]
-    globals = true
-    globaltransform = "scale(1.25)"
-    globaltransformorigin = "center"
-    globalsubpaths = [
-      { fill = "url(#a)", d = "M332 440.2a192 192 0 0086.8-74.4L256 156" },
-      { fill = "currentColor", d = "m418.6 365.8a192 192 0 10-325.3 0l160.1-207a3 3 0 015.2 0" }
+
+    [[params.social.icon.group]]
+    transform = "scale(1.25)"
+    transformorigin = "center"
+    nodes = [
+      { type = "path", fill = "url(#a)", d = "M332 440.2a192 192 0 0086.8-74.4L256 156" },
+      { type = "path", fill = "currentColor", d = "m418.6 365.8a192 192 0 10-325.3 0l160.1-207a3 3 0 015.2 0" }
     ]
+
+[[params.social]]
+  name = "PostmarketOS"
+  weight = 2
+  url = "https://postmarketos.org/"
+
+  [params.social.icon]
+    width = 32
+    height = 32
+    viewbox = "0 0 100 100"
+    fill = "none"
+    stroke = "currentColor"
+    strokewidth = "2"
+
+    [[params.social.icon.group]]
+    transform = "translate(100,100) rotate(180) translate(0, 6.698729810778069)"
+
+      [[params.social.icon.group.nodes]]
+      type = "polygon"
+      points = "29.7,17.5 25.9,27.8 15.0,26.0 0.0,0.0 65.0,0.0 58.0,8.5 65.0,17.0 29.8,17.0"
+      fill = "currentColor"
+
+      [[params.social.icon.group.nodes]]
+      type = "group"
+      transform = "translate(100,0) rotate(120)"
+      nodes = [
+        { type = "polygon", points = "29.7,17.5 25.9,27.8 15.0,26.0 0.0,0.0 65.0,0.0 58.0,8.5 65.0,17.0 29.8,17.0", fill = "currentColor"}
+      ]
+
+      [[params.social.icon.group.nodes]]
+      type = "group"
+      transform = "translate(50,86.60254037844386) rotate(240)"
+       nodes = [
+        { type = "polygon", points = "29.7,17.5 25.9,27.8 15.0,26.0 0.0,0.0 65.0,0.0 58.0,8.5 65.0,17.0 29.8,17.0", fill = "currentColor"}
+      ]
 
 [[params.social]]
 name = "Twitter"
